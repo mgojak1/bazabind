@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" prefHeight="250.0" prefWidth="550.0" stylesheets="@sample.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="37.5" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="25" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="37.5" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints vgrow="ALWAYS" />
+    </rowConstraints>
+    <Label text="Ime: " GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="Prezime: " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="Email: " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Korisnicko ime: " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label text="Lozinka: " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <TextField fx:id="textFieldIme" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+    <TextField fx:id="textFieldPrezime" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <TextField fx:id="textFieldEmail" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <TextField fx:id="textFieldKorsnickoIme" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <PasswordField fx:id="passField" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <ListView fx:id="listView" maxHeight="1.7976931348623157E308" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.rowSpan="5" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+      <GridPane.margin>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin></ListView>
+   <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
+     <buttons>
+         <Button fx:id="btnDelete" text="Obrisi" onAction="#obrisiKorisnika"/>
+       <Button fx:id="btnValidate" mnemonicParsing="false" onAction="#dodajKorisnika" text="Validate" translateX="95.0" />
+       <Button fx:id="btnDodaj" mnemonicParsing="false" onAction="#dodajPolje" text="Dodaj" />
+       <Button fx:id="btnKraj" mnemonicParsing="false" onAction="#krajPrograma" text="Kraj" />
+     </buttons>
+   </ButtonBar>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>
